@@ -59,3 +59,6 @@ excluded/basyx_basic/mqtt_200hz_basyx_run2/basyx_mqtt_received_log_200hz.csv
 excluded/basyx_basic/mqtt_200hz_basyx_run2/dispatch_basyx_mqtt_200hz.csv
 excluded/connector/opcua_10hz_connector_superseded/latency_20260802_235734.log
 excluded/connector/opcua_10hz_connector_superseded/opcua_server_log4841_20260802_205730.csv
+
+# charts written by the analysis scripts when run from the repo root
+/*.png
