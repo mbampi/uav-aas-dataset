@@ -201,3 +201,9 @@ On the Pi, start the system under test and the sidecar from
 For anonymous review, the OPC UA namespace URI in `opcua_server.py` and
 `quad_op.nodeset.xml` was replaced with `http://example.org/UAV-AAS/`. The
 system under test must be configured with the same URI.
+
+## License
+
+Code in `scripts/` is released under the MIT License (`LICENSE`). Data in
+`data/`, `excluded/` and `inputs/` is released under Creative Commons
+Attribution 4.0 International (`LICENSE-DATA`).
