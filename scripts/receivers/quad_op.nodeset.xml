@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<UANodeSet xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd"
+  xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+  <NamespaceUris>
+    <Uri>http://example.org/UAV-AAS/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://example.org/UAV-AAS/" Version="1.0.0"
+      PublicationDate="2025-11-22T19:49:50Z" />
+  </Models>
+  <UAObject NodeId="ns=1;s=AAS" BrowseName="1:AAS">
+    <DisplayName>Quadcopter AAS</DisplayName>
+    <References>
+      <Reference ReferenceType="i=35" IsForward="false">i=85</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=Identification" BrowseName="1:Identification">
+    <Description>Asset identification and Remote ID</Description>
+    <DisplayName>Identification</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Identification/Manufacturer" BrowseName="1:Manufacturer"
+    DataType="String" AccessLevel="3">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Identification</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:String>Generic Drone Company</uax:String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Identification/ProductName" BrowseName="1:ProductName"
+    DataType="String" AccessLevel="3">
+    <DisplayName>ProductName</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Identification</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:String>Quadcopter Model X1</uax:String>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Identification/RemoteID_System" BrowseName="1:RemoteID_System">
+    <Description>Mapped from OPEN_DRONE_ID_SYSTEM</Description>
+    <DisplayName>RemoteID_System</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Identification</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Identification/RemoteID_System/OperatorLocationType"
+    BrowseName="1:OperatorLocationType" DataType="Int32" AccessLevel="3">
+    <DisplayName>OperatorLocationType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Identification/RemoteID_System</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Identification/RemoteID_System/UAType" BrowseName="1:UAType"
+    DataType="Int32" AccessLevel="3">
+    <DisplayName>UAType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Identification/RemoteID_System</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Identification/RemoteID_System/ClassificationType"
+    BrowseName="1:ClassificationType" DataType="Int32" AccessLevel="3">
+    <DisplayName>ClassificationType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Identification/RemoteID_System</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Status" BrowseName="1:Status">
+    <Description>Current status from HEARTBEAT</Description>
+    <DisplayName>Status</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Status/VehicleType" BrowseName="1:VehicleType" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>VehicleType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Status</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Status/AutopilotType" BrowseName="1:AutopilotType" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>AutopilotType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Status</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Status/SystemStatus" BrowseName="1:SystemStatus" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>SystemStatus</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Status</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Power" BrowseName="1:Power">
+    <Description>System status from SYS_STATUS</Description>
+    <DisplayName>Power</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Power/Voltage" BrowseName="1:Voltage" DataType="Double" AccessLevel="3">
+    <DisplayName>Voltage</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Power</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Power/Current" BrowseName="1:Current" DataType="Double" AccessLevel="3">
+    <DisplayName>Current</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Power</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Power/Remaining" BrowseName="1:Remaining" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>Remaining</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Power</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>100</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Power/CPULoad" BrowseName="1:CPULoad" DataType="Int32" AccessLevel="3">
+    <DisplayName>CPULoad</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Power</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Power/DropRateComm" BrowseName="1:DropRateComm" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>DropRateComm</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Power</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Navigation" BrowseName="1:Navigation">
+    <Description>Global and Local positioning data</Description>
+    <DisplayName>Navigation</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=Navigation/GlobalPosition" BrowseName="1:GlobalPosition">
+    <Description>Mapped from GLOBAL_POSITION_INT</Description>
+    <DisplayName>GlobalPosition</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Navigation/GlobalPosition/Latitude" BrowseName="1:Latitude"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>Latitude</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GlobalPosition</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/GlobalPosition/Longitude" BrowseName="1:Longitude"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>Longitude</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GlobalPosition</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/GlobalPosition/AltitudeMSL" BrowseName="1:AltitudeMSL"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>AltitudeMSL</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GlobalPosition</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/GlobalPosition/Heading" BrowseName="1:Heading"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>Heading</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GlobalPosition</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Navigation/LocalPositionNED" BrowseName="1:LocalPositionNED">
+    <Description>Mapped from LOCAL_POSITION_NED</Description>
+    <DisplayName>LocalPositionNED</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Navigation/LocalPositionNED/X" BrowseName="1:X" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>X</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/LocalPositionNED</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/LocalPositionNED/Y" BrowseName="1:Y" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Y</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/LocalPositionNED</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/LocalPositionNED/Z" BrowseName="1:Z" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Z</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/LocalPositionNED</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/LocalPositionNED/VX" BrowseName="1:VX" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>VX</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/LocalPositionNED</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/LocalPositionNED/VY" BrowseName="1:VY" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>VY</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/LocalPositionNED</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/LocalPositionNED/VZ" BrowseName="1:VZ" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>VZ</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/LocalPositionNED</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Navigation/GPS_Raw" BrowseName="1:GPS_Raw">
+    <Description>Mapped from GPS_RAW_INT</Description>
+    <DisplayName>GPS_Raw</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Navigation/GPS_Raw/FixType" BrowseName="1:FixType" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>FixType</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GPS_Raw</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/GPS_Raw/SatellitesVisible" BrowseName="1:SatellitesVisible"
+    DataType="Int32" AccessLevel="3">
+    <DisplayName>SatellitesVisible</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GPS_Raw</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/GPS_Raw/HDOP" BrowseName="1:HDOP" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>HDOP</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/GPS_Raw</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Navigation/TerrainData" BrowseName="1:TerrainData">
+    <Description>Mapped from ALTITUDE</Description>
+    <DisplayName>TerrainData</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Navigation/TerrainData/TerrainAltitude" BrowseName="1:TerrainAltitude"
+    DataType="Float" AccessLevel="3">
+    <DisplayName>TerrainAltitude</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/TerrainData</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Float>0.0</uax:Float>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Navigation/TerrainData/BottomClearance" BrowseName="1:BottomClearance"
+    DataType="Float" AccessLevel="3">
+    <DisplayName>BottomClearance</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Navigation/TerrainData</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Float>0.0</uax:Float>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Attitude" BrowseName="1:Attitude">
+    <Description>Vehicle orientation and rates</Description>
+    <DisplayName>Attitude</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=Attitude/EulerAngles" BrowseName="1:EulerAngles">
+    <Description>Mapped from ATTITUDE</Description>
+    <DisplayName>EulerAngles</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Attitude/EulerAngles/Roll" BrowseName="1:Roll" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Roll</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/EulerAngles</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/EulerAngles/Pitch" BrowseName="1:Pitch" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Pitch</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/EulerAngles</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/EulerAngles/Yaw" BrowseName="1:Yaw" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Yaw</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/EulerAngles</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/EulerAngles/RollSpeed" BrowseName="1:RollSpeed"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>RollSpeed</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/EulerAngles</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/EulerAngles/PitchSpeed" BrowseName="1:PitchSpeed"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>PitchSpeed</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/EulerAngles</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/EulerAngles/YawSpeed" BrowseName="1:YawSpeed"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>YawSpeed</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/EulerAngles</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Attitude/Quaternion" BrowseName="1:Quaternion">
+    <Description>Mapped from ATTITUDE_QUATERNION</Description>
+    <DisplayName>Quaternion</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Attitude/Quaternion/Q1" BrowseName="1:Q1" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Q1</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/Quaternion</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/Quaternion/Q2" BrowseName="1:Q2" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Q2</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/Quaternion</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/Quaternion/Q3" BrowseName="1:Q3" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Q3</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/Quaternion</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/Quaternion/Q4" BrowseName="1:Q4" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Q4</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/Quaternion</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Attitude/AttitudeTarget" BrowseName="1:AttitudeTarget">
+    <Description>Mapped from ATTITUDE_TARGET</Description>
+    <DisplayName>AttitudeTarget</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Attitude/AttitudeTarget/BodyRollRate" BrowseName="1:BodyRollRate"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>BodyRollRate</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/AttitudeTarget</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/AttitudeTarget/BodyPitchRate" BrowseName="1:BodyPitchRate"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>BodyPitchRate</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/AttitudeTarget</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/AttitudeTarget/BodyYawRate" BrowseName="1:BodyYawRate"
+    DataType="Double" AccessLevel="3">
+    <DisplayName>BodyYawRate</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/AttitudeTarget</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Attitude/AttitudeTarget/Thrust" BrowseName="1:Thrust" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Thrust</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Attitude/AttitudeTarget</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Actuation" BrowseName="1:Actuation">
+    <Description>Servo outputs and ESC status</Description>
+    <DisplayName>Actuation</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;s=Actuation/ServoOutput" BrowseName="1:ServoOutput">
+    <Description>Mapped from SERVO_OUTPUT_RAW</Description>
+    <DisplayName>ServoOutput</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Actuation/ServoOutput/Servo1" BrowseName="1:Servo1" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>Servo1</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ServoOutput</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Actuation/ServoOutput/Servo2" BrowseName="1:Servo2" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>Servo2</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ServoOutput</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Actuation/ServoOutput/Servo3" BrowseName="1:Servo3" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>Servo3</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ServoOutput</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Actuation/ServoOutput/Servo4" BrowseName="1:Servo4" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>Servo4</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ServoOutput</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=Actuation/ESC_Status" BrowseName="1:ESC_Status">
+    <Description>Mapped from ESC_STATUS</Description>
+    <DisplayName>ESC_Status</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=Actuation/ESC_Status/RPM" BrowseName="1:RPM" DataType="Int32"
+    AccessLevel="3">
+    <DisplayName>RPM</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ESC_Status</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Actuation/ESC_Status/Voltage" BrowseName="1:Voltage" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Voltage</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ESC_Status</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=Actuation/ESC_Status/Current" BrowseName="1:Current" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Current</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=Actuation/ESC_Status</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;s=HUD" BrowseName="1:HUD">
+    <Description>Heads-Up Display data from VFR_HUD</Description>
+    <DisplayName>HUD</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=AAS</Reference>
+      <Reference ReferenceType="i=40">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;s=HUD/Airspeed" BrowseName="1:Airspeed" DataType="Double" AccessLevel="3">
+    <DisplayName>Airspeed</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=HUD</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=HUD/Groundspeed" BrowseName="1:Groundspeed" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>Groundspeed</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=HUD</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=HUD/Heading" BrowseName="1:Heading" DataType="Int32" AccessLevel="3">
+    <DisplayName>Heading</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=HUD</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=HUD/Throttle" BrowseName="1:Throttle" DataType="Int32" AccessLevel="3">
+    <DisplayName>Throttle</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=HUD</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Int32>0</uax:Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=HUD/Altitude" BrowseName="1:Altitude" DataType="Double" AccessLevel="3">
+    <DisplayName>Altitude</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=HUD</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;s=HUD/ClimbRate" BrowseName="1:ClimbRate" DataType="Double"
+    AccessLevel="3">
+    <DisplayName>ClimbRate</DisplayName>
+    <References>
+      <Reference ReferenceType="i=47" IsForward="false">ns=1;s=HUD</Reference>
+      <Reference ReferenceType="i=40">i=63</Reference>
+    </References>
+    <Value>
+      <uax:Double>0.0</uax:Double>
+    </Value>
+  </UAVariable>
+</UANodeSet>
